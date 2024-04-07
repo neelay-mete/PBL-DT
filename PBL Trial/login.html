@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <div class="container">
+        <div class="form-box">
+            <h1 id="title">Sign Up</h1>
+            <form action="creds.php" method="post" id="authForm">
+                <div class="input-group" id="signupGroup">
+                    <div class="input-field" id="nameField">
+                        <i class='bx bxs-user'></i>
+                        <input type="text" name="username" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-field">
+                        <i class='bx bxs-envelope'></i>
+                        <input type="email" name="email" placeholder="Email" required>
+                    </div>
+
+                    <div class="input-field">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="password" name="password" placeholder="Password" required>
+                    </div>
+
+                    <p>Already have an account? <a href="#" id="signinLink">Sign In</a></p>
+
+                </div>
+                <div class="input-group" id="signinGroup" style="display: none;">
+                    <div class="input-field">
+                        <i class='bx bxs-user'></i>
+                        <input type="text" name="signinUsername" placeholder="Username" required>
+                    </div>
+
+                    <div class="input-field">
+                        <i class='bx bxs-lock-alt'></i>
+                        <input type="password" name="signinPassword" placeholder="Password" required>
+                    </div>
+
+                    <p>Don't have an account? <a href="#" id="signupLink">Sign Up</a></p>
+                </div>
+                <div class="btn-field">
+                    <button type="submit" id="actionBtn">Sign up</button>
+
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        let signinBtn = document.getElementById("signinBtn");
+        // Toggle between sign-up and sign-in forms
+        document.getElementById("signupLink").addEventListener("click", function (e) {
+            e.preventDefault();
+            document.getElementById("title").innerText = "Sign Up";
+            document.getElementById("signupGroup").style.display = "block";
+            document.getElementById("signinGroup").style.display = "none";
+            document.getElementById("actionBtn").innerText = "Sign up";
+        });
+
+        document.getElementById("signinLink").addEventListener("click", function (e) {
+            e.preventDefault();
+            document.getElementById("title").innerText = "Sign In";
+            document.getElementById("signupGroup").style.display = "none";
+            document.getElementById("signinGroup").style.display = "block";
+            document.getElementById("actionBtn").innerText = "Sign in";
+        });
+
+        // Function to redirect to another page
+        function redirectToSignUpPage() {
+            window.location.href = "login.html"; // Replace "signup.html" with the URL of the page you want to redirect to
+        }
+
+        // Add event listener to the button
+        document.getElementById("signupBtn").addEventListener("click", redirectToSignUpPage);
+    </script>
+</body>
+
+</html>

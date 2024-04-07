@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mental Health Tracking App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: rgb(0, 0, 33);
+            color: white;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(14, 14, 54);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+        }
+
+        nav ul li a:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.02rem;
+        }
+
+        section nav div ul li b {
+            text-decoration: none;
+            color: white;
+        }
+
+        section nav div ul li b:hover {
+            color: rgb(153, 153, 226);
+            font-size: 1.02rem;
+        }
+
+        main hr {
+            border: 0;
+            background: #9c97f1;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .left {
+            font-size: 1.5rem;
+        }
+
+        .firstsection {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 130px 0;
+        }
+
+        .firstsection>div {
+            width: 30%;
+        }
+
+        .leftsection {
+            font-size: 3rem;
+        }
+
+        .righsection {
+            width: 23px;
+        }
+
+        .righsection nav {
+            width: 80%;
+            margin: 50px 0;
+        }
+
+        .purple {
+            color: rgb(170, 107, 228);
+        }
+
+        #element {
+            color: rgb(170, 107, 228);
+        }
+
+        .secondsection {
+            width: 80vw;
+            margin: 60px 84px;
+            height: 0.000001vh;
+        }
+
+        .secondsection h1 {
+            font-size: 1.9rem;
+            margin: 60px 84px;
+        }
+
+        .content {
+
+            font-size: 1.2rem;
+            color: thistle;
+            font-family: 'Poppins', sans-serif;
+            margin: 60px 84px;
+
+        }
+
+        .box {
+            background-color: white;
+            width: 80vw;
+            height: 1.2px;
+            margin: 60px 84px;
+        }
+
+        .secondSection .vertical {
+            height: 93px;
+            width: 1px;
+            background-color: white;
+            margin: 60px 84px;
+        }
+
+        .hr .h1 {
+            margin: 70px 84px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="left">M.H.T.A - Find Your Calm</div>
+            <div class="right"></div>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, User Having A Stressed Day?<span class="purple"> No Worries We Are Here
+                </span>
+                <div>Have You Signed Up To Our
+                    <span id="element"></span>
+                </div>
+            </div>
+            <div class="rightsection">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="login.html">Login</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+        <hr>
+        <section class="secondsection"></section>
+
+
+        <div class="content">
+            <h1>About Us</h1>
+            Project Team : Neelay Mete,
+            Affan Khan,
+            Sharvari Kulkarni,
+            Vidhi Makhwana
+        </div>
+
+        <div class="box">
+            <div class="=vertical"></div>
+            <div class="=vertical"></div>
+            <div class="=vertical"></div>
+            <div class="=vertical"></div>
+        </div>
+
+        </section>
+    </main>
+
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+
+
+    <script>
+        var typed = new Typed('#element', {
+            strings: ['Project', 'MHTA', 'Calm', 'Website'],
+            typeSpeed: 40,
+        })
+    </script>
+</body>
+
+</html>
